@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoxe-Dispatch</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <script src="https://code.jquery.com/jquery-latest.min.js"></script>
+</head>
+
+<body>
+    <div class="Main">
+        <div class="Action">
+            <div class="Reload">
+                <i class="fa-solid fa-rotate-right" onclick="Post({Type: 'Reload'})"></i>
+            </div>
+            <div class="Show">
+                <i class="fa-solid fa-eye" onclick="Post({Type: 'Show'})"></i>
+            </div>
+            <div class="Sound">
+                <i class="fa-solid fa-volume-high" onclick="Post({Type: 'Sound'})"></i>
+            </div>
+        </div>
+        <div class="Dispatch"> </div>
+    </div>
+    <script src="./script.js" type="module"></script>
+    <script src="./event.js" type="module"></script>
+</body>
+
+</html>

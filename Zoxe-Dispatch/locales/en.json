@@ -1,0 +1,49 @@
+{
+    "Panic_Blip": "Panic Button",
+    "Panic_Title": "Panic Button",
+    "Panic_Message": "All Emergency Alerted",
+
+    "Shooting_Blip": "Shooting",
+    "Shooting_Title": "Shoot Gun",
+    "Shooting_Message": "Shoot Gun Reported",
+
+    "VehicleShooting_Blip": "Vehicle Shooting",
+    "VehicleShooting_Title": "Vehicle Shoot Gun",
+    "VehicleShooting_Message": "Vehicle Shoot Reported",
+
+    "Fight_Blip": "Fighting",
+    "Fight_Title": "Fight",
+    "Fight_Message": "Fight Reported",
+
+    "VehicleJacking_Blip": "Vehicle Jacking",
+    "VehicleJacking_Title": "Vehicle Jack",
+    "VehicleJacking_Message": "Vehicle Jack Reported",
+
+    "VehicleTheft_Blip": "Vehicle Theft",
+    "VehicleTheft_Title": "Vehicle Theft",
+    "VehicleTheft_Message": "Vehicle Theft Reported",
+
+    "VehicleSpeed_Blip": "Vehicle Speeding",
+    "VehicleSpeed_Title": "Vehicle Speed",
+    "VehicleSpeed_Message": "Vehicle Speed Reported",
+
+    "Explosion_Blip": "Explosion",
+    "Explosion_Title": "Explosion",
+    "Explosion_Message": "Explosion Reported",
+
+    "InjuredPerson_Blip": "Injured Person",
+    "InjuredPerson_Title": "Injured Person",
+    "InjuredPerson_Message": "Person Injured Reported",
+
+    "InjuredPolice_Blip": "Injured LSPD",
+    "InjuredPolice_Title": "Injured LSPD",
+    "InjuredPolice_Message": "LSPD Injured Reported",
+
+    "InjuredAmbulance_Blip": "Injured EMS",
+    "InjuredAmbulance_Title": "Injured EMS",
+    "InjuredAmbulance_Message": "EMS Injured Reported",
+
+    "Light": "Level: <b> Light </b>",
+    "Medium": "Level: <b> Medium </b>",
+    "Heavy": "Level: <b> Heavy </b>"
+}

@@ -1,0 +1,260 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+    box-sizing: border-box;
+}
+
+button,
+select,
+input,
+textarea {
+    font: inherit;
+}
+
+a {
+    color: inherit;
+}
+
+:root {
+    --BackGround: #1f1f1f;
+    --BorderNav: #313131;
+    --White: white;
+    --Gray: gray;
+    --Black: black;
+    --GraySmoke: #2e2e2e;
+    --WhiteSmoke: whitesmoke;
+}
+
+.Main {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    opacity: 0;
+    user-select: none;
+}
+
+.Main .Action {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    line-height: 28px;
+    top: 85px;
+    right: 94px;
+    /* right: 97px; */
+}
+
+.Action i {
+    position: relative;
+    color: var(--WhiteSmoke);
+    margin: 0 15px;
+    background: var(--BackGround);
+    padding: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.Action i:hover {
+    background: var(--Gray);
+}
+
+.Main .Dispatch {
+    position: absolute;
+    height: 53rem;
+    width: 23.5rem;
+    top: 7rem;
+    right: 1rem;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    border-radius: 15px;
+}
+
+.Main .Dispatch::-webkit-scrollbar {
+    display: none;
+}
+
+.Dispatch .Player {
+    position: relative;
+    width: 23.5rem;
+    height: 2.7rem;
+    margin-top: 1.25rem;
+    background: var(--BackGround);
+    border-radius: 0.688rem;
+    overflow: hidden;
+    transition: 0.47s all;
+    z-index: 5;
+
+    display: flex;
+    align-items: center;
+    padding: 0 1rem;
+}
+
+.Dispatch .Allert {
+    position: relative;
+    width: 23.5rem;
+    height: 8.5rem;
+    top: -0.5rem;
+    margin-top: 1.25rem;
+    background: var(--BackGround);
+    border-radius: 0.688rem;
+    overflow: hidden;
+    transition: 0.47s all;
+    z-index: 5;
+
+    display: flex;
+    padding: 0 1rem;
+
+    animation: 1s slide-left;
+}
+
+@keyframes slide-left {
+    from {
+        margin-left: 100%;
+    }
+
+    to {
+        margin-left: 0%;
+    }
+}
+
+.Player .Actions i,
+.Allert .Actions i {
+    margin-left: 10px;
+    color: var(--WhiteSmoke);
+    font-size: 15px;
+    cursor: pointer;
+}
+
+/* .Player .Code:hover, */
+.Allert .Code:hover {
+    background: darkred;
+    transform: scale(1.05);
+}
+
+.Player .Code {
+    position: relative;
+    color: var(--WhiteSmoke);
+    background: var(--BorderNav);
+    padding: 4px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.Player .Title {
+    margin-left: 15px;
+    position: relative;
+    color: var(--WhiteSmoke);
+    background: var(--BorderNav);
+    padding: 4px 8px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 15px;
+}
+
+.Player .Actions {
+    margin-left: auto;
+    color: var(--WhiteSmoke);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+}
+
+.Allert .Code {
+    position: relative;
+    color: var(--WhiteSmoke);
+    background: var(--BorderNav);
+    padding: 4px 8px;
+    height: 27px;
+    top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Inter';
+    font-size: 15px;
+    font-weight: bold;
+    transition: background 0.3s, transform 0.3s;
+}
+
+.Allert .Code i {
+    margin-right: 5px;
+}
+
+.Allert .Title {
+    margin-left: 15px;
+    position: relative;
+    color: var(--WhiteSmoke);
+    background: var(--BorderNav);
+    padding: 4px 8px;
+    height: 27px;
+    top: 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: 'Be Vietnam Pro', sans-serif;
+    font-size: 15px;
+}
+
+.Allert .Actions {
+    margin-left: auto;
+    color: var(--WhiteSmoke);
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    height: 47px;
+    top: 10px;
+}
+
+.Allert .Time {
+    display: inline-flex;
+    align-items: center;
+    position: absolute;
+    right: 7px;
+    bottom: 3px;
+    font-size: 15px;
+    padding: 4px;
+}
+
+.Allert .Time i,
+.Allert .Description i {
+    color: var(--White);
+    margin-right: 5px;
+}
+
+.Allert .Time p,
+.Allert .Description p {
+    font-family: "Be Vietnam Pro", sans-serif;
+    color: var(--White);
+}
+
+.Allert .Description {
+    position: absolute;
+    top: 48px;
+}
+
+.Allert .Description div {
+    display: flex;
+    align-items: center;
+    font-size: 15px;
+    padding: 3px;
+}
