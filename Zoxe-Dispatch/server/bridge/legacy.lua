@@ -1,6 +1,6 @@
 local Framework = {}
 
-local Legacy = exports['LegacyFramework']:ReturnFramework() or nil
+local Legacy = exports.LegacyFramework:ReturnFramework() or nil
 
 function Framework:GetPlayerData(id)
     return Legacy.SvPlayerFunctions.GetPlayerData(id)[1]
