@@ -22,13 +22,12 @@ end
 function Framework:GetJob(Job)
     local Result = MySQL.query.await('SELECT * FROM ' .. Config.Job.Table .. ' WHERE `job_name` = ?', { Job })
     if Result and #Result > 0 then
-        Utils:ReturnDebug(Result[1])
         return Result[1]
     end
 end
 
 lib.callback.register('Zoxe_Dispatch:GetPlayerJob', function(source, Job)
-    Framework:GetJob(Job)
+    return Framework:GetJob(Job)
 end)
 
 return Framework
