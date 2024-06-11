@@ -42,9 +42,9 @@ setr ox:locale en
 
 <table>
   <tr>
-    <td><img src="https://github.com/ENT510/LGF_Banking/assets/145626625/7b5cbcb9-fe60-4828-9d1e-1bdc43fa7560" alt="Manage Banking" width="300"/></td>
-    <td><img src="https://github.com/ENT510/LGF_Banking/assets/145626625/fa70a893-f2d4-4d2e-91fc-84704820eeb9" alt="Pin Creation" width="300"/></td>
-    <td><img src="https://github.com/ENT510/LGF_Banking/assets/145626625/666fce84-cb7f-4d6a-977d-a32d5fc9b1ba" alt="Create Fake Card" width="300"/></td>
+    <td><img src="https://media.discordapp.net/attachments/903729747916378132/1250039732201717780/image.png?ex=66697db8&is=66682c38&hm=7db5963f50d92f51210ae80ff010821336bf86c1d0d3ef5a60abd090c396b68e&=&format=webp&quality=lossless&width=832&height=468" alt="Manage Banking" width="300"/></td>
+    <td><img src="https://media.discordapp.net/attachments/903729747916378132/1250039732973338624/image.png?ex=66697db8&is=66682c38&hm=3ced8a10a0c7f38fabfb92d61e36fbfc32874f271c9ed00d0945a447f2e5eb9c&=&format=webp&quality=lossless&width=832&height=468" alt="Pin Creation" width="300"/></td>
+    <td><img src="https://media.discordapp.net/attachments/903729747916378132/1250039733724250242/image.png?ex=66697db9&is=66682c39&hm=fa0395d73b09b8c202cf81ad1405bbb4a9c5dfb26130998acdfcebb6e08bc704&=&format=webp&quality=lossless&width=832&height=468" alt="Create Fake Card" width="300"/></td>
   </tr>
 </table>
 
