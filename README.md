@@ -4,9 +4,9 @@
 > You cannot sell or distribute this script as your own work.
 > See https://www.gnu.org/licenses/gpl-3.0.html for the full text of the GPL.
 
-Advanced Dispatch System For Multiple Job
-
 # Zoxe-Dispatch
+
+Advanced Dispatch System For Multiple Job
 
 ## Configuration
 
@@ -94,7 +94,7 @@ return {
 		weight = 0,
 		stack = false
 	},
-    ['dispatch_ems'] = {
+    	['dispatch_ems'] = {
 		label = 'Dispatch EMS',
 		weight = 0,
 		stack = false
@@ -132,8 +132,10 @@ Config.Settings = {
 
 ```lua
 Config.Job = {
-    { Name = 'police',    Active = true, SendAsJob = true },
-    { Name = 'ambulance', Active = true, SendAsJob = false },
+    List = {
+        { Name = 'police',    Active = true, SendAsJob = true },
+        { Name = 'ambulance', Active = true, SendAsJob = false },
+    }
 }
 ```
 
@@ -204,6 +206,8 @@ Config.WeaponWhitelist = {
 <hr style="border-radius: 50%; margin: 0 25px;">
 
 # All Exports & Events
+
+<br>
 
 - **Name**: `NewAllert`, **Utility**: `Use The Export For Create New Allert`
   - **Client Side Exports:**
