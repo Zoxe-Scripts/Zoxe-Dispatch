@@ -1,9 +1,6 @@
 local Framework = {}
 
-local Shared = require 'shared.utils'
-
 local ESX = exports['es_extended']:getSharedObject() or nil
-
 
 function Framework:GetPlayerData(id)
     return ESX.GetPlayerFromId(id)

@@ -12,8 +12,11 @@ Config.Settings = {
 }
 
 Config.Job = {
-    { Name = 'police',    Active = true, SendAsJob = true },
-    { Name = 'ambulance', Active = true, SendAsJob = false },
+    Table = 'job_grades',
+    List = {
+        { Name = 'police',    Active = true, SendAsJob = true },
+        { Name = 'ambulance', Active = true, SendAsJob = false },
+    }
 }
 
 Config.DefaultAllerts = {

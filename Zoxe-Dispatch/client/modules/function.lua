@@ -55,7 +55,7 @@ function DeleteDispatch(Data)
 end
 
 function PlayerListsDispatch(Data)
-    local PlayerLists = lib.callback('Zoxe_Dispatch:PlayerLists', false)
+    local PlayerLists = lib.callback.await('Zoxe_Dispatch:PlayerLists', false)
 
     if json.encode(PlayerLists) == '[]' or PlayerLists == nil then return end
 

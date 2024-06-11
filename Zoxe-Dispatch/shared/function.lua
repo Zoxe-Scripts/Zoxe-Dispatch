@@ -38,7 +38,7 @@ function Function:SendTo(Args)
         local Job = Framework:GetPlayerJob(Id).Name or Framework:GetPlayerJob().Name
 
         for _, CheckJob in ipairs(Args) do
-            for _, CfgJob in ipairs(Config.Job) do
+            for _, CfgJob in ipairs(Config.Job.List) do
                 if Job == CheckJob and Job == CfgJob.Name and CfgJob.Active == true then
                     table.insert(SendTo, Id)
                 end
@@ -55,7 +55,7 @@ function Function:CheckJob(Args)
     if Args.SendTo == 'Everyone' or Args.Allert == 'PlayerDowned' then return true end
 
     for _, CheckJob in ipairs(Args.Job) do
-        for _, CfgJob in ipairs(Config.Job) do
+        for _, CfgJob in ipairs(Config.Job.List) do
             if CfgJob.SendAsJob then
                 if Job == CheckJob and Job == CfgJob.Name then
                     return true
@@ -99,7 +99,7 @@ function Function:StreetName()
 end
 
 function Function:Explosion()
-    local Explosions = lib.callback('Zoxe_Dispatch:ExplosionEvent', false)
+    local Explosions = lib.callback.await('Zoxe_Dispatch:ExplosionEvent', false)
     Type = Explosions.explosionType
 
     for _, Explosion in ipairs(ModList.Explosion) do

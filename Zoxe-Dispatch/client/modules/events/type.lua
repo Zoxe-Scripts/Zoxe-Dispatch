@@ -357,7 +357,7 @@ function Allerts.PlayerDowned(reason)
     local Location, Coords = Function:StreetName()
     local Object, NameObject = Function:Death(reason)
 
-    if Framework:GetPlayerJob().Name == Config.Job[1].Name then
+    if Framework:GetPlayerJob().Name == Config.Job.List[1].Name then
         local Blip = locale('InjuredPolice_Blip')
 
         TriggerServerEvent('Zoxe_Dispatch:Post', {
@@ -389,7 +389,7 @@ function Allerts.PlayerDowned(reason)
                 Allert = debug.getinfo(1, 'n').name
             }
         })
-    elseif Framework:GetPlayerJob().Name == Config.Job[2].Name then
+    elseif Framework:GetPlayerJob().Name == Config.Job.List[2].Name then
         local Blip = locale('InjuredAmbulance_Blip')
 
         TriggerServerEvent('Zoxe_Dispatch:Post', {
