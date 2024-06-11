@@ -52,6 +52,7 @@ setr ox:locale en
 
 - [x] **ESX**
 - [x] **LGF**
+- [x] **Qbox**
 - [x] **QB (Soon)**
 
 # Features

@@ -29,6 +29,9 @@ function Utils:Core(string)
         elseif GetResourceState('LegacyFramework'):find('start') then
             Utils:ReturnDebug('LegacyFramework Detected')
             return require 'client.bridge.legacy'
+        elseif GetResourceState('qb_core'):find('start') then
+            Utils:ReturnDebug('Qbx Detected')
+            return require 'client.bridge.qbox'
         else
             warn('Could not find a Framework!')
         end
@@ -40,6 +43,9 @@ function Utils:Core(string)
         elseif GetResourceState('LegacyFramework'):find('start') then
             Utils:ReturnDebug('LegacyFramework Detected')
             return require 'server.bridge.legacy'
+        elseif GetResourceState('qb_core'):find('start') then
+            Utils:ReturnDebug('Qbx Detected')
+            return require 'server.bridge.qbox'
         else
             warn('Could not find a Framework!')
         end

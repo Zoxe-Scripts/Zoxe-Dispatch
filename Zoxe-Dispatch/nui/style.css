@@ -245,6 +245,11 @@ a {
 .Allert .Description p {
     font-family: "Be Vietnam Pro", sans-serif;
     color: var(--White);
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 95%;
 }
 
 .Allert .Description {
