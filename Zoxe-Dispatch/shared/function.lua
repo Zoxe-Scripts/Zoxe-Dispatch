@@ -4,8 +4,8 @@ local Timer = {}
 -- Check
 
 function Function:CanOpen()
-    return not LocalPlayer.state.invOpen
-        and not IsPauseMenuActive()
+    local Ped = cache.ped
+    return not LocalPlayer.state.invOpen and not IsPauseMenuActive() and not Config.GetPlayerDeath(Ped)
 end
 
 function Function:WeaponWhitelist(Args)

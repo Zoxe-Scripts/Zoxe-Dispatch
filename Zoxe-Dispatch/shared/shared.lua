@@ -177,3 +177,13 @@ Config.GetPlayerNumber = function(src)
         return Phone
     end
 end
+
+Config.GetPlayerDeath = function(Ped)
+    if Utils:Resource() == 'Ars' then
+        return exports.ars_ambulancejob:isDead()
+    elseif Utils:Resource() == 'Esx' then
+        return IsEntityDead(Ped)
+    else
+        return print('Put Your Logic / exports')
+    end
+end

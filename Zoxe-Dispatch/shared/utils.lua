@@ -62,6 +62,12 @@ function Utils:Resource()
     elseif GetResourceState('lb-phone'):find('start') then
         Utils:ReturnDebug('LB Resource Detected')
         return 'LB'
+    elseif GetResourceState('ars_ambulancejob'):find('start') then
+        Utils:ReturnDebug('Ars Resource Detected')
+        return 'Ars'
+    elseif GetResourceState('esx_ambulancejob'):find('start') then
+        Utils:ReturnDebug('Esx Resource Detected')
+        return 'Esx'
     else
         warn('Could not find a Resource!')
     end

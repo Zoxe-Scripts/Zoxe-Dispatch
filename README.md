@@ -65,6 +65,14 @@ setr ox:locale en
 
 - Supports: `ox`, `esx`, `lgf`, `qb`
 
+### Multi Phone System Support
+
+- Supports: `qs`, `lb`, `qb`
+
+### Multi Death System Support
+
+- Supports: `ars`, `esx`, `custom`
+
 ### Multi Other System Support
 
 - Supports: `ox`, `esx`, `lgf`, `qb`
