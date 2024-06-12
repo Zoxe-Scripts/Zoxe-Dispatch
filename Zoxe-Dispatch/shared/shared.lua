@@ -3,25 +3,25 @@ Config = {}
 Config.ReturnDebug = true
 
 Config.Settings = {
-    MouseInput = false,
-    OpenDispatch = 'L',
-    AllertTime = 5,
-    AllertShow = 5,
-    MaxAllertsList = false,
-    PlayerLists = 'RpName'
+    MouseInput = false,     -- Set MouseInput for Allert
+    OpenDispatch = 'L',     -- Set OpenDispatch for Allert
+    AllertTime = 5,         -- Set AllertTime for Allert
+    AllertShow = 5,         -- Set AllertShow for Allert
+    MaxAllertsList = false, -- Set MaxAllertsList or true or false for MaxAllertsList
+    PlayerLists = 'RpName'  -- RpName or GameName
 }
 
 Config.Job = {
-    Table = 'job_grades',
+    Table = 'job_grades',                                         -- Not Touch This
     List = {
-        { Name = 'police',    Active = true, SendAsJob = true },
-        { Name = 'ambulance', Active = true, SendAsJob = false },
+        { Name = 'police',    Active = true, SendAsJob = false }, -- Set true or false for SendAsJob and Active
+        { Name = 'ambulance', Active = true, SendAsJob = false }, -- Set true or false for SendAsJob and Active
     }
 }
 
 Config.DefaultAllerts = {
-    Delay = 5,
-    Allerts = {
+    Delay = 5,  -- Set Delay for DefaultAllerts
+    Allerts = { -- Set true or false for DefaultAllerts
         Shooting = true,
         VehicleSpeed = true,
         VehicleTheft = true,
@@ -36,21 +36,21 @@ Config.AllertType = {
 
     -- LSPD
     ['Shooting'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',             -- RpName or GameName or FakeName
+        Number = 'RpNumber',         -- RpNumber or FakeNumber
         Blip = {
-            EnableBlip = true,
-            EnableCircleBlip = true,
-            ShowAll = true,
-            Sprite = 156,
-            Scale = 0.8,
-            Color = 2,
-            Radius = 50.0,
+            EnableBlip = true,       -- Set true or false for EnableBlip
+            EnableCircleBlip = true, -- Set true or false for EnableCircleBlip
+            ShowAll = true,          -- Set true or false for ShowAll
+            Sprite = 156,            -- Set Blip Id
+            Scale = 0.8,             -- Set Blip Scale
+            Color = 2,               -- Set Blip Color
+            Radius = 50.0,           -- Set Blip Radius
         },
     },
     ['VehicleShooting'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',
+        Number = 'RpNumber',
         Blip = {
             EnableBlip = true,
             EnableCircleBlip = true,
@@ -62,8 +62,8 @@ Config.AllertType = {
         },
     },
     ['Fight'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',
+        Number = 'RpNumber',
         Blip = {
             EnableBlip = true,
             EnableCircleBlip = true,
@@ -75,8 +75,8 @@ Config.AllertType = {
         },
     },
     ['VehicleJacking'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',
+        Number = 'RpNumber',
         Blip = {
             EnableBlip = true,
             EnableCircleBlip = true,
@@ -88,8 +88,8 @@ Config.AllertType = {
         },
     },
     ['VehicleTheft'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',
+        Number = 'RpNumber',
         Blip = {
             EnableBlip = true,
             EnableCircleBlip = true,
@@ -101,8 +101,8 @@ Config.AllertType = {
         },
     },
     ['Explosion'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',
+        Number = 'RpNumber',
         Blip = {
             EnableBlip = true,
             EnableCircleBlip = true,
@@ -114,8 +114,8 @@ Config.AllertType = {
         },
     },
     ['VehicleSpeed'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',
+        Number = 'RpNumber',
         Blip = {
             EnableBlip = true,
             EnableCircleBlip = true,
@@ -129,38 +129,38 @@ Config.AllertType = {
 
     -- EMS
     ['PlayerDowned'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',             -- RpName or GameName or FakeName
+        Number = 'RpNumber',         -- RpNumber or FakeNumber
         Blip = {
-            EnableBlip = true,
-            EnableCircleBlip = true,
-            ShowAll = true,
-            Sprite = 488,
-            Scale = 0.8,
-            Color = 2,
-            Radius = 50.0,
+            EnableBlip = true,       -- Set true or false for EnableBlip
+            EnableCircleBlip = true, -- Set true or false for EnableCircleBlip
+            ShowAll = true,          -- Set true or false for ShowAll
+            Sprite = 488,            -- Set Blip Id
+            Scale = 0.8,             -- Set Blip Scale
+            Color = 2,               -- Set Blip Color
+            Radius = 50.0,           -- Set Blip Radius
         },
     },
 
     -- LSPD/EMS
     ['PanicButton'] = {
-        Name = 'RpName',     -- RpName or GameName or FakeName
-        Number = 'RpNumber', -- RpNumber or FakeNumber
+        Name = 'RpName',              -- RpName or GameName or FakeName
+        Number = 'RpNumber',          -- RpNumber or FakeNumber
         Blip = {
-            EnableBlip = true,
-            EnableCircleBlip = false,
-            ShowAll = true,
-            Sprite = 458,
-            Scale = 0.8,
-            Color = 2,
-            Radius = 50.0,
+            EnableBlip = true,        -- Set true or false for EnableBlip
+            EnableCircleBlip = false, -- Set true or false for EnableCircleBlip
+            ShowAll = true,           -- Set true or false for ShowAll
+            Sprite = 458,             -- Set Blip Id
+            Scale = 0.8,              -- Set Blip Scale
+            Color = 2,                -- Set Blip Color
+            Radius = 50.0,            -- Set Blip Radius
         },
     }
 }
 
 Config.WeaponWhitelist = {
     'WEAPON_STUNGUN',
-    -- 'WEAPON_PISTOL'
+    'WEAPON_PISTOL'
 }
 
 
