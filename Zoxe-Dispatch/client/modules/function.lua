@@ -121,4 +121,26 @@ function SoundDispatch()
     })
 end
 
+function PlayerInfoDispatch()
+    local Ped = cache.ped
+    local PlayerId = cache.playerId
+    local ServerId = cache.serverId
+    local Name = Function:PlayerName(Cfg)
+    local Number = Function:PlayerNumber(Cfg)
+    local Location, Coords = Function:StreetName()
+
+    return {
+        Ped = Ped,
+        PlayerId = PlayerId,
+        ServerId = ServerId,
+        Name = Name,
+        Number = Number,
+        Street = {
+            Location = Location,
+            Coords = Coords
+        }
+    }
+end
+
 exports('NewAllert', NewAllertDispatch)
+exports('PlayerInfo', PlayerInfoDispatch)
