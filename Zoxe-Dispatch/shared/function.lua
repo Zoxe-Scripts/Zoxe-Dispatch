@@ -100,6 +100,9 @@ end
 
 function Function:Explosion()
     local Explosions = lib.callback.await('Zoxe_Dispatch:ExplosionEvent', false)
+
+    if not Explosions then return locale('Null'), locale('Null') end
+
     Type = Explosions.explosionType
 
     for _, Explosion in ipairs(ModList.Explosion) do
@@ -118,6 +121,8 @@ end
 
 function Function:Weapon()
     local Type = exports.ox_inventory:getCurrentWeapon()
+
+    if not Type then return locale('Null'), locale('Null'), locale('Null') end
 
     local Data = ModList.Weapon[Type.hash].Name
     local Level = ModList.Weapon[Type.hash].Level

@@ -482,3 +482,4 @@ function Allerts.NewAllertDispatch(Args)
 end
 
 exports('Allerts', Allerts)
+exports('NewAllertDispatch', Allerts.NewAllertDispatch)

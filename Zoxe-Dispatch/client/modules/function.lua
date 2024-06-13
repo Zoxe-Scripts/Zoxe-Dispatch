@@ -131,15 +131,15 @@ function PlayerInfoDispatch(Data)
     local PlayerId = cache.playerId
     local ServerId = cache.serverId
 
-    local Name = Function:PlayerName(Data.Name or Cfg)
-    local Number = Function:PlayerNumber(Data.Number or Cfg)
+    local Name = Function:PlayerName({ Name = Data.Name } or Cfg)
+    local Number = Function:PlayerNumber({ Number = Data.Number } or Cfg)
+    local Object2, NameObject2 = Function:Explosion()
 
     local Object1, NameObject1, TypeObject = Function:Weapon()
-    local Object2, NameObject2 = Function:Explosion()
     local Location, Coords = Function:StreetName()
     local Vehcile = Function:VehcileData()
 
-    return {
+    local PlayerInfo = {
         Ped = Ped,
         PlayerId = PlayerId,
         ServerId = ServerId,
@@ -154,13 +154,20 @@ function PlayerInfoDispatch(Data)
             NameObject = NameObject1,
             TypeObject = TypeObject
         },
-        Explosion = {
-            Object = Object2,
-            NameObject = NameObject2
-        },
         Vehcile = Vehcile
     }
+
+    if Object2 or NameObject2 then
+        PlayerInfo.Explosion = {
+            Object = Object2,
+            NameObject = NameObject2
+        }
+    end
+
+    Utils:ReturnDebug(PlayerInfo)
+
+    return PlayerInfo
 end
 
-exports('NewAllertDispatch', Allerts.NewAllertDispatch)
 exports('PlayerInfoDispatch', PlayerInfoDispatch)
+exports('FirstOpenDispatch', FirstOpenDispatch)

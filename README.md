@@ -8,6 +8,19 @@
 
 Advanced Dispatch System For Multiple Job
 
+### Credis:
+
+**Idea And More**: [@ENT510](https://github.com/ENT510), **Video**: @IlMicioLetale
+
+## Features
+
+- Advanced Call Management: Handle multiple emergency calls with ease.
+- Real-Time Location Tracking: Monitor units in real-time on the map.
+- Priority Dispatching: Prioritize calls based on severity.
+- Customizable Notifications: Set up custom alerts for different types of incidents.
+- Detailed Call Logs: Maintain records of all dispatched calls for future reference.
+- Integrated Response Timer: Track response times for better efficiency.
+
 ## Configuration
 
 To configure `Zoxe-Dispatch`, follow these steps:
