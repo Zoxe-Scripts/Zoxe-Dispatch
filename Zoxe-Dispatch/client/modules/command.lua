@@ -12,5 +12,3 @@ lib.addKeybind({
         FirstOpenDispatch()
     end
 })
-
-exports('FirstOpenDispatch', FirstOpenDispatch)

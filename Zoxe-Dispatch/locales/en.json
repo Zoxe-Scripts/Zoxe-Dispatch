@@ -45,5 +45,7 @@
 
     "Light": "Level: <b> Light </b>",
     "Medium": "Level: <b> Medium </b>",
-    "Heavy": "Level: <b> Heavy </b>"
+    "Heavy": "Level: <b> Heavy </b>",
+
+    "Null": "Null"
 }
