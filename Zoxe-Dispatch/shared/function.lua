@@ -210,8 +210,8 @@ function Function:WayPoint(Args)
     end)
 end
 
-function Function:VehcileData(Args)
-    Args          = GetVehiclePedIsUsing(Args, true)
+function Function:VehcileData()
+    Args          = GetVehiclePedIsUsing(cache.ped, true)
 
     local Plate   = GetVehicleNumberPlateText(Args)
     local Vehicle = GetLabelText(GetDisplayNameFromVehicleModel(GetEntityModel(Args)))

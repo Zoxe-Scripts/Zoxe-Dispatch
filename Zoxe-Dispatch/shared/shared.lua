@@ -7,7 +7,7 @@ Config.Settings = {
     OpenDispatch = 'L',     -- Set OpenDispatch for Allert
     AllertTime = 5,         -- Set AllertTime for Allert
     AllertShow = 5,         -- Set AllertShow for Allert
-    MaxAllertsList = false, -- Set MaxAllertsList or true or false for MaxAllertsList
+    MaxAllertsList = false, -- Set MaxAllertsList number or false for MaxAllertsList
     PlayerLists = 'RpName'  -- RpName or GameName
 }
 
@@ -151,6 +151,21 @@ Config.AllertType = {
             EnableCircleBlip = false, -- Set true or false for EnableCircleBlip
             ShowAll = true,           -- Set true or false for ShowAll
             Sprite = 458,             -- Set Blip Id
+            Scale = 0.8,              -- Set Blip Scale
+            Color = 2,                -- Set Blip Color
+            Radius = 50.0,            -- Set Blip Radius
+        },
+    },
+
+    -- Other
+    ['NewAllertDispatch'] = {
+        Name = 'RpName',              -- RpName or GameName or FakeName
+        Number = 'RpNumber',          -- RpNumber or FakeNumber
+        Blip = {
+            EnableBlip = true,        -- Set true or false for EnableBlip
+            EnableCircleBlip = false, -- Set true or false for EnableCircleBlip
+            ShowAll = true,           -- Set true or false for ShowAll
+            Sprite = 280,             -- Set Blip Id
             Scale = 0.8,              -- Set Blip Scale
             Color = 2,                -- Set Blip Color
             Radius = 50.0,            -- Set Blip Radius

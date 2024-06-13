@@ -218,17 +218,17 @@ Config.WeaponWhitelist = {
 
 <br>
 
-- **Name**: `NewAllert`, **Utility**: `Use The Export For Create New Allert`
+- **Name**: `NewAllertDispatch`, **Utility**: `Use The Export For Create New Allert`
   - **Client Side Exports:**
 
 ```lua
-exports['Zoxe-Dispatch']:NewAllert(Data)
+exports['Zoxe-Dispatch']:NewAllertDispatch(Data)
 ```
 
 <hr style="border-radius: 50%; margin: 0 25px;">
 <br>
 
-- **Name**: `NewAllert`, **Utility**: `Use The Event For Create New Allert`
+- **Name**: `NewAllertDispatch`, **Utility**: `Use The Event For Create New Allert`
   - **Client Side Event:**
 
 ```lua
@@ -244,6 +244,7 @@ exports['Zoxe-Dispatch']:NewAllert(Data)
             Message = Message,
             Sound = Sound,
             SendTo = SendTo,
+            Job = Job,
             MaxAllertsList = MaxAllertsList,
             AllertShow = AllertShow,
             PanicButtons = PanicButtons
@@ -273,12 +274,13 @@ RegisterCommand('Help', function(source, args)
         Message = Message,
         Sound = Sound,
         SendTo = SendTo,
+        Job = Job,
         MaxAllertsList = MaxAllertsList,
         AllertShow = AllertShow,
         PanicButtons = PanicButtons
     }
 
-    exports['Zoxe_Dispatch']:NewAllert(Data)
+    exports['Zoxe_Dispatch']:NewAllertDispatch(Data)
 end)
 
 RegisterCommand('Help', function(source, args)

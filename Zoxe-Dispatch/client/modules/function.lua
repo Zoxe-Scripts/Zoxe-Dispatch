@@ -95,6 +95,7 @@ function NewAllertDispatch(Data)
                 Message = Data.Message,
                 Sound = Data.Sound or true,
                 SendTo = Data.SendTo,
+                Job = Data.Job,
                 MaxAllertsList = Data.MaxAllertsList or Config.Settings.MaxAllertsList,
                 AllertShow = Data.AllertShow or Config.Settings.AllertShow,
                 PanicButtons = Data.PanicButtons
@@ -121,13 +122,20 @@ function SoundDispatch()
     })
 end
 
-function PlayerInfoDispatch()
+function PlayerInfoDispatch(Data)
+    local Cfg = Config.AllertType['NewAllertDispatch']
+
     local Ped = cache.ped
     local PlayerId = cache.playerId
     local ServerId = cache.serverId
-    local Name = Function:PlayerName(Cfg)
-    local Number = Function:PlayerNumber(Cfg)
+
+    local Name = Function:PlayerName(Data.Name or Cfg)
+    local Number = Function:PlayerNumber(Data.Number or Cfg)
+
+    local Object1, NameObject1, TypeObject = Function:Weapon()
+    local Object2, NameObject2 = Function:Explosion()
     local Location, Coords = Function:StreetName()
+    local Vehcile = Function:VehcileData()
 
     return {
         Ped = Ped,
@@ -138,9 +146,19 @@ function PlayerInfoDispatch()
         Street = {
             Location = Location,
             Coords = Coords
-        }
+        },
+        Weapon = {
+            Object = Object1,
+            NameObject = NameObject1,
+            TypeObject = TypeObject
+        },
+        Explosion = {
+            Object = Object2,
+            NameObject = NameObject2
+        },
+        Vehcile = Vehcile
     }
 end
 
-exports('NewAllert', NewAllertDispatch)
-exports('PlayerInfo', PlayerInfoDispatch)
+exports('NewAllertDispatch', Allerts.NewAllertDispatch)
+exports('PlayerInfoDispatch', PlayerInfoDispatch)

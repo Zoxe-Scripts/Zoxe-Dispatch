@@ -180,7 +180,7 @@ function Allerts.VehicleJacking()
     local Name = Function:PlayerName(Cfg)
     local Number = Function:PlayerNumber(Cfg)
     local Location, Coords = Function:StreetName()
-    local Vehcile = Function:VehcileData(Ped)
+    local Vehcile = Function:VehcileData()
 
     local Blip = locale('VehicleJacking_Blip')
 
@@ -224,7 +224,7 @@ function Allerts.VehicleTheft()
     local Name = Function:PlayerName(Cfg)
     local Number = Function:PlayerNumber(Cfg)
     local Location, Coords = Function:StreetName()
-    local Vehcile = Function:VehcileData(Ped)
+    local Vehcile = Function:VehcileData()
 
     local Blip = locale('VehicleTheft_Blip')
 
@@ -268,7 +268,7 @@ function Allerts.VehicleSpeed()
     local Name = Function:PlayerName(Cfg)
     local Number = Function:PlayerNumber(Cfg)
     local Location, Coords = Function:StreetName()
-    local Vehcile = Function:VehcileData(Ped)
+    local Vehcile = Function:VehcileData()
 
     local Blip = locale('VehicleSpeed_Blip')
 
@@ -454,6 +454,31 @@ function Allerts.PlayerDowned(reason)
             }
         })
     end
+end
+
+function Allerts.NewAllertDispatch(Args)
+    local Cfg = Config.AllertType['NewAllertDispatch']
+
+    local Ped = cache.ped
+    local PlayerId = cache.playerId
+    local ServerId = cache.serverId
+
+    local Blip = ("%s"):format(
+        Args.Title
+    )
+
+    TriggerServerEvent('Zoxe_Dispatch:Post', {
+        Function = 'NewAllertDispatch',
+        Args = Args,
+        Other = {
+            Ped = Ped,
+            PlayerId = PlayerId,
+            ServerId = ServerId,
+            Cfg = Cfg,
+            Blip = Blip,
+            Allert = debug.getinfo(1, 'n').name
+        }
+    })
 end
 
 exports('Allerts', Allerts)
