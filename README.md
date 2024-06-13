@@ -101,12 +101,18 @@ return {
 	['dispatch_lspd'] = {
 		label = 'Dispatch LSPD',
 		weight = 0,
-		stack = false
+		stack = false,
+		client = {
+		    export = 'Zoxe-Dispatch.FirstOpenDispatch'
+		}
 	},
     	['dispatch_ems'] = {
 		label = 'Dispatch EMS',
 		weight = 0,
-		stack = false
+		stack = false,
+	        client = {
+	            export = 'Zoxe-Dispatch.FirstOpenDispatch'
+	        }
 	}
 }
 ```

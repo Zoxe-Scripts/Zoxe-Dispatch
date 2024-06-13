@@ -15,7 +15,7 @@ function GeneratePlayerLists(source)
         if PlayerName ~= Name then
             local Code = Function:BadgeNumber(Name)
             local Title = Function:PlayerName(
-                { Name = 'JobName', Id = Id }
+                { Name = Config.Settings.Dispatchs, Id = Id }
             )
 
             table.insert(PlayerList, {

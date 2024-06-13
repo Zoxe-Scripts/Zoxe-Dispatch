@@ -9,8 +9,8 @@ lib.addKeybind({
     description = 'Open Dispatch',
     defaultKey = Config.Settings.OpenDispatch,
     onPressed = function()
-        if Function:CanOpen() then
-            FirstOpenDispatch()
-        end
+        FirstOpenDispatch()
     end
 })
+
+exports('FirstOpenDispatch', FirstOpenDispatch)

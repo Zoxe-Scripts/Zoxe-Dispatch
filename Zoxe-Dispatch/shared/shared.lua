@@ -8,7 +8,8 @@ Config.Settings = {
     AllertTime = 5,         -- Set AllertTime for Allert
     AllertShow = 5,         -- Set AllertShow for Allert
     MaxAllertsList = false, -- Set MaxAllertsList number or false for MaxAllertsList
-    PlayerLists = 'RpName'  -- RpName or GameName
+    PlayerLists = 'RpName',  -- RpName or GameName
+    Dispatchs = 'JobName'  -- JobName
 }
 
 Config.Job = {

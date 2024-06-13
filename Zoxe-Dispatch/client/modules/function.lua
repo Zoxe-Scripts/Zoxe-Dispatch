@@ -23,14 +23,16 @@ function CloseDispatch()
 end
 
 function FirstOpenDispatch()
-    if not Check then
-        OpenDispatch()
-        NewPlayerDispatch(Function:PlayerName(
-            { Name = 'JobName' }
-        ))
-        Check = true
-    else
-        OpenDispatch()
+    if Function:CanOpen() then
+        if not Check then
+            OpenDispatch()
+            NewPlayerDispatch(Function:PlayerName(
+                { Name = Config.Settings.Dispatchs }
+            ))
+            Check = true
+        else
+            OpenDispatch()
+        end
     end
 end
 
