@@ -1,6 +1,6 @@
 local Framework = {}
 
-local QBX = exports.qbx_core or nil
+local QBX = exports['qb-core']:GetCoreObject() or nil
 
 function Framework:GetPlayerData(id)
     return exports.qbx_core:GetPlayer(id).PlayerData
