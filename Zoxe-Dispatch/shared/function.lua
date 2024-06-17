@@ -5,7 +5,17 @@ local Timer = {}
 
 function Function:CanOpen()
     local Ped = cache.ped
-    return not LocalPlayer.state.invOpen and not IsPauseMenuActive() and not Config.GetPlayerDeath(Ped)
+    local Job = Framework:GetPlayerJob().Name or Framework:GetPlayerJob(Id).Name
+
+    if not LocalPlayer.state.invOpen and not IsPauseMenuActive() and not Config.GetPlayerDeath(Ped) then
+        for _, CfgJob in ipairs(Config.Job.List) do
+            if Job == CfgJob.Name and CfgJob.Active == true then
+                return true
+            end
+        end
+    end
+
+    return false
 end
 
 function Function:WeaponWhitelist(Args)
@@ -261,7 +271,7 @@ function Function:PlayerNumber(Cfg)
     local Number = ''
 
     if Cfg.Number == 'RpNumber' then
-        Number = Config.GetPlayerNumber(Framework:GetPlayerData().source) or '+1 (555) 123-4567'
+        Number = Config.GetPlayerNumber(Framework:GetPlayerData().source)
     elseif Cfg.Number == 'FakeNumber' then
         Number = '+1 (555) Unknown'
     end

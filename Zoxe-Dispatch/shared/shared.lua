@@ -8,8 +8,8 @@ Config.Settings = {
     AllertTime = 5,         -- Set AllertTime for Allert
     AllertShow = 5,         -- Set AllertShow for Allert
     MaxAllertsList = false, -- Set MaxAllertsList number or false for MaxAllertsList
-    PlayerLists = 'RpName',  -- RpName or GameName
-    Dispatchs = 'JobName'  -- JobName
+    PlayerLists = 'RpName', -- RpName or GameName
+    Dispatchs = 'JobName'   -- JobName
 }
 
 Config.Job = {
@@ -191,6 +191,12 @@ Config.GetPlayerNumber = function(src)
         local Player = QBCore.Functions.GetPlayer(src)
         local Phone = Player.PlayerData.charinfo.phone
         return Phone
+    elseif Utils:Resource() == 'Qbox' then
+        local Player = exports.qbx_core:GetPlayer(src)
+        local Phone = Player.PlayerData.charinfo.phone
+        return Phone
+    else
+        return print('Put Your Logic / exports')
     end
 end
 

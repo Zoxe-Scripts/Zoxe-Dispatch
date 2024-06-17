@@ -24,28 +24,34 @@ function Utils:Core(string)
             Utils:ReturnDebug('Esx Framework Detected')
             return require 'client.bridge.esx'
         elseif GetResourceState('qb-core'):find('start') then
-            Utils:ReturnDebug('Qb Framework Detected')
-            return require 'client.bridge.qb'
+            if GetResourceState('qbx_core'):find('start') then
+                Utils:ReturnDebug('Qbx Detected')
+                return require 'client.bridge.qbox'
+            else
+                Utils:ReturnDebug('Qb Framework Detected')
+                return require 'client.bridge.qb'
+            end
         elseif GetResourceState('LegacyFramework'):find('start') then
             Utils:ReturnDebug('LegacyFramework Detected')
             return require 'client.bridge.legacy'
-        elseif GetResourceState('qb_core'):find('start') then
-            Utils:ReturnDebug('Qbx Detected')
-            return require 'client.bridge.qbox'
         else
             warn('Could not find a Framework!')
         end
     elseif string == 'server' then
         if GetResourceState('es_extended'):find('start') then
+            Utils:ReturnDebug('Esx Framework Detected')
             return require 'server.bridge.esx'
         elseif GetResourceState('qb-core'):find('start') then
-            return require 'server.bridge.qb'
+            if GetResourceState('qbx_core'):find('start') then
+                Utils:ReturnDebug('Qbx Detected')
+                return require 'server.bridge.qbox'
+            else
+                Utils:ReturnDebug('Qb Framework Detected')
+                return require 'server.bridge.qb'
+            end
         elseif GetResourceState('LegacyFramework'):find('start') then
             Utils:ReturnDebug('LegacyFramework Detected')
             return require 'server.bridge.legacy'
-        elseif GetResourceState('qb_core'):find('start') then
-            Utils:ReturnDebug('Qbx Detected')
-            return require 'server.bridge.qbox'
         else
             warn('Could not find a Framework!')
         end
@@ -54,8 +60,13 @@ end
 
 function Utils:Resource()
     if GetResourceState('qb-core'):find('start') then
-        Utils:ReturnDebug('QB Resource Detected')
-        return 'QB'
+        if GetResourceState('qbx_core'):find('start') then
+            Utils:ReturnDebug('Qbox Resource Detected')
+            return 'Qbox'
+        else
+            Utils:ReturnDebug('QB Resource Detected')
+            return 'QB'
+        end
     elseif GetResourceState('qs-base'):find('start') then
         Utils:ReturnDebug('QS Resource Detected')
         return 'QS'
