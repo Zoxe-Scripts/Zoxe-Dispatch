@@ -271,7 +271,7 @@ function Function:PlayerNumber(Cfg)
     local Number = ''
 
     if Cfg.Number == 'RpNumber' then
-        Number = Config.GetPlayerNumber(Framework:GetPlayerData().source)
+        Number = lib.callback.await('Zoxe_Dispatch:PlayerPhone', false) --Config.GetPlayerNumber(Framework:GetPlayerData().source)
     elseif Cfg.Number == 'FakeNumber' then
         Number = '+1 (555) Unknown'
     end

@@ -3,7 +3,7 @@ local Framework = {}
 local QBX = exports['qb-core']:GetCoreObject() or nil
 
 function Framework:GetPlayerData(id)
-    return exports.qbx_core:GetPlayer(id).PlayerData
+    return exports.qbx_core:GetPlayer(tonumber(id)).PlayerData
 end
 
 function Framework:GetPlayerName(id)

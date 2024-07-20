@@ -8,6 +8,10 @@ lib.callback.register('Zoxe_Dispatch:PlayerLists', function(source)
     return GeneratePlayerLists(source)
 end)
 
+lib.callback.register('Zoxe_Dispatch:PlayerPhone', function(source)
+    return Config.GetPlayerNumber(source)
+end)
+
 lib.callback.register('Zoxe_Dispatch:ExplosionEvent', function(source)
     if Explosion then
         return Explosion

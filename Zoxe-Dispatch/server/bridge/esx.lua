@@ -3,7 +3,7 @@ local Framework = {}
 local ESX = exports['es_extended']:getSharedObject() or nil
 
 function Framework:GetPlayerData(id)
-    return ESX.GetPlayerFromId(id)
+    return ESX.GetPlayerFromId(tonumber(id))
 end
 
 function Framework:GetPlayerName(id)
